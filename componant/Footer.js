@@ -4,7 +4,7 @@ function Footer(props) {
   return (
     <div>
       <footer>
-        <div className="container border">
+        <div className="container-fluid ">
           <div className="row">
             <div className="col about">
               <h3>About the store</h3>
@@ -88,12 +88,7 @@ function Footer(props) {
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <div className="row">
-            <ul>
-              <li>
+                <li>
                 <a href="#">Terms of purchase</a>
               </li>
               <li>
@@ -102,6 +97,13 @@ function Footer(props) {
               <li>
                 <a href="#">Newsletter</a>
               </li>
+              </ul>
+              
+            </div>
+          </div>
+          <div className="">
+          <ul>
+             
             </ul>
           </div>
         </div>

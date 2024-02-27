@@ -50,7 +50,7 @@ export default function Home() {
           <div className="col">
             <img
               src="/book1.jpg"
-              style={{ width: 500, padding: 10, float: "right" }}
+              style={{ width: 500, padding: 10, float: "right" , mixBlendMode: "color-burn"}}
             />
           </div>
         </div>

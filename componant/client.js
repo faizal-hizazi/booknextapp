@@ -4,12 +4,12 @@ import firebase from "firebase/app";
 import { getAuth } from "@firebase/auth";
 import { getFirestore } from "firebase/firestore/lite";
 const firebaseConfig = {
-  apiKey: "AIzaSyBb-i5ac5CI4Gvxu2zhOM-yeXNAVfQW0Qs",
-  authDomain: "demoproject-cba4a.firebaseapp.com",
-  projectId: "demoproject-cba4a",
-  storageBucket: "demoproject-cba4a.appspot.com",
-  messagingSenderId: "854473448631",
-  appId: "1:854473448631:web:daf0abeb92e8791377c132",
+  apiKey: process.env.FIREBASE_KEY,
+  authDomain: process.env.authDomain,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId:process.env.messagingSenderId,
+  appId: process.env.appId,
   measurementId: "G-FL1BS4PD0Y",
 };
 
