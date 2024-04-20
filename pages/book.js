@@ -49,6 +49,9 @@ function Book(props) {
   useEffect(() => {
     fetchbooks();
   }, []);
+  const handlerofcart =(id)=>{
+    console.log("cart"+id)
+  }
   return (
     <div>
       <Navbar />
@@ -62,6 +65,7 @@ function Book(props) {
               <th scope="col">isbn</th>
               <th scope="col">title</th>
               <th scope="col">author</th>
+              <th scope="col">operation</th>
             </tr>
           </thead>
           {currentItems?.map((val, index) => (
@@ -71,6 +75,9 @@ function Book(props) {
                 <td>{val.isbn}</td>
                 <td>{val.title}</td>
                 <td>{val.author}</td>
+                <td><svg onClick={()=>handlerofcart(index)} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+</svg></td>
               </tr>
             </tbody>
           ))}
@@ -78,7 +85,7 @@ function Book(props) {
         </table>
         <div className="d-flex align-item-center justify-content-center gap-5 ">
         <button onClick={handlePrevPage} disabled={currentPage === 1} className="btn btn-warning active">Previous</button>
-        <p className="btn-warning">Page {currentPage}</p>
+        <p className="btn-warning px-2 active">Page {currentPage}</p>
       <button onClick={handleNextPage} disabled={indexOfLastItem >= book?.books?.length} className="btn btn-warning active ">Next</button>
       </div>
       </div>
