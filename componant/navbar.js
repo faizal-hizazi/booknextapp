@@ -7,7 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./client";
 function Navbar(props) {
   const [user] = useAuthState(auth);
-  console.log(auth);
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light border ">
       <div className="container-fluid">

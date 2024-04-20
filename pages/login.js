@@ -3,15 +3,31 @@ import Navbar from "../componant/navbar";
 import { signIn } from "../componant/facebook";
 import { signIngoogle } from "../componant/google";
 import { signInEmail } from "../componant/auth";
+import { useRouter } from "next/dist/client/router";
+
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [passowrd, setPassword] = useState("");
+  const router = useRouter();
   const submithandler = (e) => {
     e.preventDefault();
     // console.log(email, passowrd);
-    signInEmail(email, passowrd);
+    const IsSign = signInEmail(email, passowrd);
+    if (IsSign) {
+      router.push('/');
+    }
+
+
   };
+  const signInwithgoogle = () => {
+    const isLogin = signIngoogle();
+
+    if (isLogin) {
+
+      router.push('/')
+    }
+  }
   return (
     <>
       {" "}
@@ -31,7 +47,7 @@ function Login(props) {
                 <span classNameName="m-2">
                   <i
                     className="fab fa-google-plus-square"
-                    onClick={() => signIngoogle()}
+                    onClick={() => signInwithgoogle()}
                   ></i>
                 </span>
                 {/* <span classNameName="m-2">

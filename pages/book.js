@@ -55,7 +55,7 @@ function Book(props) {
 
       <div>
         
-        <table className="table bg-secondary">
+        <table className="table table-dark table-striped">
           <thead className="">
             <tr>
               <th scope="col">s/no</th>
@@ -74,11 +74,12 @@ function Book(props) {
               </tr>
             </tbody>
           ))}
+          
         </table>
-        <div className="d-flex align-item-center justify-content-center gap-5">
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>Previous</button>
-        <p>Page {currentPage}</p>
-      <button onClick={handleNextPage} disabled={indexOfLastItem >= book?.books?.length}>Next</button>
+        <div className="d-flex align-item-center justify-content-center gap-5 ">
+        <button onClick={handlePrevPage} disabled={currentPage === 1} className="btn btn-warning active">Previous</button>
+        <p className="btn-warning">Page {currentPage}</p>
+      <button onClick={handleNextPage} disabled={indexOfLastItem >= book?.books?.length} className="btn btn-warning active ">Next</button>
       </div>
       </div>
     </div>

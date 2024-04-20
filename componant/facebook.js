@@ -16,3 +16,4 @@ export const signIn = async () => {
 // export const signIn = async () => {
 //   console.log("hello");
 // };
+process.env.FIREBASE_KEY
